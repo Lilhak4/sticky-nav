@@ -178,9 +178,13 @@
     // when making nav fixed, it no longer takes up space
     function fixNav() {
       if (window.scrollY >= topOfNav) {
+        // offset size so there is no jerky jump when nav sticks
+        // offsetHeight is the height in pixels of the nav
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
         document.body.classList.add('fixed-nav');
       } else {
         document.body.classList.remove('fixed-nav');
+        document.body.style.paddingTop = 0;
       }
     }
 
