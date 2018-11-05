@@ -67,7 +67,8 @@ nav li {
   justify-content: center;
   align-items: center;
 }
-
+/* transitions cannot occur if width is set to 0. It has to
+be a max-width specification */
 li.logo {
   max-width:0;
   overflow: hidden;
